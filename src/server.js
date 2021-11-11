@@ -13,3 +13,13 @@ app.use(home);
 app.use('/dice', diceRouter);
 app.use('/dice/v2', dicev2Router);
 app.listen(3001, () => console.log("Listening on port: 3001"));
+
+const express = require('express');
+const app = express();
+
+app.get("/", (req, res) => {
+    res.send("Successful response");
+});
+
+app.listen(3001, () => console.log("Listening on port: 3001"));
+
